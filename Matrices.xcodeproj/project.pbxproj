@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6628785D16349E4500D53427 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6628785C16349E4500D53427 /* main.cpp */; };
 		6628785F16349E4500D53427 /* Matrices.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6628785E16349E4500D53427 /* Matrices.1 */; };
+		66D99BC31642F9AE006FE48D /* matrix.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66C05732163F2B1C00B2A150 /* matrix.txt */; };
+		66D99BCB16444828006FE48D /* MatriceProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66D99BBB1642F6DE006FE48D /* MatriceProgram.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,6 +19,7 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
+				66D99BC31642F9AE006FE48D /* matrix.txt in CopyFiles */,
 				6628785F16349E4500D53427 /* Matrices.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
@@ -26,8 +28,11 @@
 
 /* Begin PBXFileReference section */
 		6628785816349E4500D53427 /* Matrices */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Matrices; sourceTree = BUILT_PRODUCTS_DIR; };
-		6628785C16349E4500D53427 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6628785E16349E4500D53427 /* Matrices.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Matrices.1; sourceTree = "<group>"; };
+		6628786516349F6600D53427 /* MatriceProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatriceProgram.h; sourceTree = "<group>"; };
+		66C05731163F2B1C00B2A150 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/matrix.txt; sourceTree = "<group>"; };
+		66D99BBB1642F6DE006FE48D /* MatriceProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MatriceProgram.cpp; sourceTree = "<group>"; };
+		66D99BC516431303006FE48D /* MatrixOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatrixOperations.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +65,10 @@
 		6628785B16349E4500D53427 /* Matrices */ = {
 			isa = PBXGroup;
 			children = (
-				6628785C16349E4500D53427 /* main.cpp */,
+				66D99BBB1642F6DE006FE48D /* MatriceProgram.cpp */,
+				6628786516349F6600D53427 /* MatriceProgram.h */,
+				66D99BC516431303006FE48D /* MatrixOperations.h */,
+				66C05732163F2B1C00B2A150 /* matrix.txt */,
 				6628785E16349E4500D53427 /* Matrices.1 */,
 			);
 			path = Matrices;
@@ -117,17 +125,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6628785D16349E4500D53427 /* main.cpp in Sources */,
+				66D99BCB16444828006FE48D /* MatriceProgram.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		66C05732163F2B1C00B2A150 /* matrix.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66C05731163F2B1C00B2A150 /* en */,
+			);
+			name = matrix.txt;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		6628786016349E4500D53427 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -157,7 +176,7 @@
 		6628786116349E4500D53427 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -173,6 +192,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -210,6 +230,7 @@
 				6628786416349E4500D53427 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
